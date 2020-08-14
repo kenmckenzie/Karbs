@@ -1,6 +1,7 @@
 #!/bin/sh
 # Luke's Auto Rice Boostrapping Script (LARBS)
 # by Luke Smith <luke@lukesmith.xyz>
+# edited to deploy personal desktop dotfiles by Ken McKenzie 
 # License: GNU GPLv3
 
 ### OPTIONS AND VARIABLES ###
@@ -253,6 +254,13 @@ cp "/home/$name/etc/lightfm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-
 # start lightdm on boot via systemd
 systemctl enable lightdm.service
 
+# Temporarily add .local/bin to path to run setbg(This is set permanantly via .Profile)
+export PATH="/home/$name/.local/bin/:$PATH"
+# Run background setter on default background
+setbg "/home/$name/Pictures/default.jpg"
+
+# Todo, add wpg-install.sh to the script so that it generates the icon and gtk schemes during install
+# then, copy them to required folders to theme lightdm startup
 
 # Last message! Install complete!
 finalize
