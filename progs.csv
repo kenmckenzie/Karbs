@@ -92,6 +92,9 @@ A,anydesk-bin,Remote login software
 ,zsh-syntax-highlighting,Shell Deps
 A,spaceship-prompt-git,Shell Deps
 ,celluloid,MPV Frontend
-,Libreoffice-fresh,office software
+,libreoffice-fresh,office software
 ,lightdm,login software
 ,lightdm-gtk-greeter,login software
+P,xparser,dependency for qtile 
+,fortune-mod,Fluff text on terminal startup
+,python-pyxgd,Another Qtile dependency
