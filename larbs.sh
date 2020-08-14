@@ -151,7 +151,7 @@ systembeepoff() { dialog --infobox "Getting rid of that retarded error beep soun
 
 finalize(){ \
 	dialog --infobox "Preparing welcome message..." 4 50
-	dialog --title "All done!" --msgbox "Congrats! Provided there were no hidden errors, the script completed successfully and all the programs and configuration files should be in place.\\n\\nTo run the new graphical environment, enable lightdm.service\\n\\ Then login and run setbg in terminal" 12 80
+	dialog --title "All done!" --msgbox "Congrats! Provided there were no hidden errors, the script completed successfully and all the programs and configuration files should be in place.\\n\\nTo run the new graphical environment, restart and login via lightdm \\n\\n Then run setbg in terminal" 12 80
 	}
 
 ### THE ACTUAL SCRIPT ###
@@ -249,6 +249,10 @@ killall pulseaudio; sudo -u "$name" pulseaudio --start
 # Copy paste the lightdm profile config so it sources my dotfiles correctly
 cp "/home/$name/etc/lightdm/Xsession" "/etc/lightdm/Xsession"
 cp "/home/$name/etc/lightfm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+
+# start lightdm on boot via systemd
+systemctl enable lightdm.service
+
 
 # Last message! Install complete!
 finalize

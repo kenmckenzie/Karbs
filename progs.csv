@@ -97,4 +97,5 @@ A,spaceship-prompt-git,Shell Deps
 ,lightdm-gtk-greeter,login software
 P,xparser,dependency for qtile 
 ,fortune-mod,Fluff text on terminal startup
-,python-pyxgd,Another Qtile dependency
+,python-pyxdg,Another Qtile dependency
+,python-psutil,Another Qtile dependency
