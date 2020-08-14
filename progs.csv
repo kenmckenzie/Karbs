@@ -11,7 +11,7 @@ V,libXft-devel,is required for the compilation of some programs.
 V,gcr-devel,is required for the compilation of some programs.
 V,fontconfig-devel,is required for the compilation of some programs.
 ,ttf-linux-libertine,provides the sans and serif fonts for LARBS.
-,ranger,"is an extensive terminal file manager that is hip to hate cause python, I don’t care though"
+,ranger,"is an extensive terminal file manager that is hip to hate cause python, I donï¿½t care though"
 ,arandr,is a UI for screen adjustment.
 ,galculator,Calculator
 ,calcurse,is a lightweight terminal-based calendar.
@@ -43,7 +43,6 @@ V,font-symbola,provides unicode and emoji symbols.
 ,pulsemixer,is an audio controler.
 ,pamixer,is a command-line audio interface.
 ,maim,can take quick screenshots at your request.
-,abook,is an offline addressbook usable by neomutt.
 ,socat,is a socket utility.
 ,unclutter,hides an inactive mouse.
 V,unclutter-xfixes,hides an inactive mouse.
@@ -93,3 +92,6 @@ A,anydesk-bin,Remote login software
 ,zsh-syntax-highlighting,Shell Deps
 A,spaceship-prompt-git,Shell Deps
 ,celluloid,MPV Frontend
+,Libreoffice-fresh,office software
+,lightdm,login software
+,lightdm-gtk-greeter,login software
