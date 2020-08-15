@@ -249,7 +249,7 @@ killall pulseaudio; sudo -u "$name" pulseaudio --start
 
 # Copy paste the lightdm profile config so it sources my dotfiles correctly and themes lightdm
 cp "/home/$name/etc/lightdm/Xsession" "/etc/lightdm/Xsession"
-cp "/home/$name/etc/lightfm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+cp "/home/$name/etc/lightdm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
 
 # start lightdm on boot via systemd
 systemctl enable lightdm.service
