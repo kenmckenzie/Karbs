@@ -247,17 +247,22 @@ killall pulseaudio; sudo -u "$name" pulseaudio --start
 [ "$distro" = arch ] && newperms "%wheel ALL=(ALL) ALL #LARBS
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/systemctl suspend,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman -Syu,/usr/bin/pacman -Syyu,/usr/bin/packer -Syu,/usr/bin/packer -Syyu,/usr/bin/systemctl restart NetworkManager,/usr/bin/rc-service NetworkManager restart,/usr/bin/pacman -Syyu --noconfirm,/usr/bin/loadkeys,/usr/bin/yay,/usr/bin/pacman -Syyuw --noconfirm"
 
-# Copy paste the lightdm profile config so it sources my dotfiles correctly
+# Copy paste the lightdm profile config so it sources my dotfiles correctly and themes lightdm
 cp "/home/$name/etc/lightdm/Xsession" "/etc/lightdm/Xsession"
 cp "/home/$name/etc/lightfm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
 
 # start lightdm on boot via systemd
 systemctl enable lightdm.service
 
+mkdir /usr/share/themes/FlatColor && chown -R $name:$name /usr/share/themes/FlatColor 
+mkdir /usr/share/pixmaps/wall && chown -R $name:$name /usr/share/pixmaps/wall
+
+
+# No longer necessary
 # Temporarily add .local/bin to path to run setbg(This is set permanantly via .Profile)
-export PATH="/home/$name/.local/bin/:$PATH"
+# export PATH="/home/$name/.local/bin/:$PATH"
 # Run background setter on default background
-setbg "/home/$name/Pictures/default.jpg"
+# setbg "/home/$name/Pictures/default.jpg"
 
 # Todo, add wpg-install.sh to the script so that it generates the icon and gtk schemes during install
 # then, copy them to required folders to theme lightdm startup
