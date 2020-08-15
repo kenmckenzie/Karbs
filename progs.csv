@@ -99,3 +99,4 @@ P,xparser,dependency for qtile
 ,fortune-mod,Fluff text on terminal startup
 ,python-pyxdg,Another Qtile dependency
 ,python-psutil,Another Qtile dependency
+,htop,system monitor

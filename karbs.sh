@@ -254,8 +254,8 @@ cp "/home/$name/etc/lightfm/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-
 # start lightdm on boot via systemd
 systemctl enable lightdm.service
 
-mkdir /usr/share/themes/FlatColor && chown -R $name:$name /usr/share/themes/FlatColor 
-mkdir /usr/share/pixmaps/wall && chown -R $name:$name /usr/share/pixmaps/wall
+mkdir /usr/share/themes/FlatColor && chown -R $name:wheel /usr/share/themes/FlatColor 
+mkdir /usr/share/pixmaps/wall && chown -R $name:wheel /usr/share/pixmaps/wall
 
 
 # No longer necessary
