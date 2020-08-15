@@ -100,3 +100,12 @@ P,xparser,dependency for qtile
 ,python-pyxdg,Another Qtile dependency
 ,python-psutil,Another Qtile dependency
 ,htop,system monitor
+,lxsession,dependency for wpgtk
+,nm-applet,needed for systray
+,pa-applet,needed for systray
+,xfce4-power-manager,Systray + Power Managment
+A,spotify-tray-git,needed for systray
+,x11vnc,Remote access
+,steam,Gaming
+A,Xclickroot-git,allows right click to open up jgmenu 
+,transmission-cli,Torrent
